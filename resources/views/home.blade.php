@@ -1,17 +1,14 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+    {{--Status before clicked add dashboard--}}
+    @include('dashboards.show_modal_status')
+            <!-- Pop_up add new dashboard -->
+    @include('dashboards.show_modal_add')
+
+        {{--ALL DASHBOARDS USER--}}
+    @include('dashboards.show_all_dasboards_user')
 </div>
 @endsection
+

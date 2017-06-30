@@ -10,3 +10,7 @@ Homestead.yaml
 npm-debug.log
 .env
 .env.example
+/database/migrations/*
+database/migrations/*
+database/migrations/2014_10_12_000000_create_users_table.php
+database/migrations/2014_10_12_000000_create_users_table.php

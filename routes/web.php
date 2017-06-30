@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home/delete/{id}','HomeController@delete');
+Route::post('/home/add','HomeController@add');
+Route::post('/home/edit/{id}','HomeController@edit');
