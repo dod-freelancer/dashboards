@@ -53,9 +53,14 @@ class HomeController extends Controller
         return Dashboard::add();
     }
 
-    public function edit(){
-        Dashboard::edit(request('id'),request('body'),request('title'), Carbon::now()->toDateTimeString());
-        return redirect('/home');
+    public function edit($id){
+        $dash = Dashboard::find($id);
+        return view('dashboards.edit_dashboard',compact('dash'));
+    }
+
+    public function change($id){
+        Dashboard::edit($id,request('title'),request('body'));
+        return redirect('home');
     }
 
 }

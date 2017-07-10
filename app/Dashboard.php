@@ -49,12 +49,11 @@ class Dashboard extends Model
      * @param $title
      * @param $body
      */
-    public static function edit($id,$title,$body,$updated){
+    public static function edit($id,$title,$body){
 
         Dashboard::where('id', $id)->update(array(
             'title' => $title,
             'body' => $body,
-            'updated_at' => $updated
         ));
 }
 }
