@@ -1,0 +1,46 @@
+/* APP BLADE*/
+html, body{
+  height: 100%;
+}
+.secondary_page_layout{
+  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 1));
+  height: 100%;
+
+}
+.navbar_layout{
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+}
+#dashboard_text{
+  color: white;
+}
+/* EDIT DASHBOARD*/
+input[type="text"]:focus{
+  box-shadow: 0 0 5px 1px #969696;
+}
+input[type="text"].edit_input {
+  border: solid 1px #707070;
+  display: block;
+  margin: 0;
+  width: 600px;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+.label_content{
+  font-size: 25px;
+}
+.edit_text {
+ width: 600px;
+ height: 300px;
+ font: normal 14px verdana;
+ line-height: 25px;
+ padding: 2px 10px;
+ border: solid 1px #ddd;
+
+}
+.edit_text:focus{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.edit_layout{}
