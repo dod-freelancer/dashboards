@@ -1,34 +1,36 @@
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" >
         <h2 id="dashboard_text">Yours dashboards: <span class="badge">{{count($dashboards)}}</span></h2>
 
         {{--content of each dashboard from db--}}
         @foreach($dashboards as $dashboard)
-            <div class="panel panel-default">
-
-                <div class="panel-heading">{{$dashboard->title}}
-                    <span class="serial-number">{{$dashboard->id}}</span>
+            <div id="dashboard_block">
+                <div id="title_block">{{$dashboard->title}}
+                    <span>{{$dashboard->id}}</span>
                 </div>
-                <div class="panel-body panel_custom">{{$dashboard->body}}</div>
-                <div class="panel-footer">
+              </hr>
+                <div id="body_block">{{$dashboard->body}}</div>
+              </hr>
+                <div id="additional_block">
                     <b>Dashboard created at:</b> {{$dashboard->created_at}},
                     <b>Dashboard updated at:</b> {{$dashboard->updated_at}}
                 </div>
+              </hr>
 
-                <div class="panel-footer">
-                    <div class="form-group">
+                <div id="del_edit_content">
+                    <div>
                         {{--Delete Each Dashboard--}}
                         <form method="post" action="/home/delete/{{$dashboard->id}}">
                             {{csrf_field()}}
-                            <input type="submit" class="btn btn-sm btn-danger" value="delete">
+                            <input type="submit" class="btn btn-sm btn-danger" id="delete_button_custom" value="delete">
                         </form>
                     </div>
                     {{--Edit Dashboard--}}
-                    <div class="form-group">
+                    <div>
                         <form class="form" method="post" action="/home/edit/{{$dashboard->id}}">
                             {{csrf_field()}}
-                            <input type="submit" value="edit" class="btn btn-sm" id="edit_button">
+                            <input type="submit" value="edit" class="btn btn-sm" id="edit_button_custom">
                         </form>
                     </div>
                 </div>

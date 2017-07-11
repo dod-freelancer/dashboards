@@ -1,17 +1,85 @@
 /* APP BLADE*/
+*{
+  padding: 0;
+  margin: 0;
+}
 html, body{
+  background: radial-gradient(#450003,#5C0002,#94090D,#D40D12,#FF1D23);
   height: 100%;
 }
 .secondary_page_layout{
-  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 1));
   height: 100%;
-
+  width: 100%;
 }
-.navbar_layout{
+.navbar_layout {
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  border: none;
   box-shadow: 0 1px 15px rgba(0,0,0,0.2);
 }
 #dashboard_text{
   color: white;
+}
+/*ALL DASHBOARD*/
+#left_navbar{
+  z-index: 5;
+  color: white;
+}
+#right_nav_drop_logout{
+  z-index: 5;
+  color: white;
+}
+#dashboard_block{
+  text-align: center;
+  background-color: white;
+  width: 43%;
+  float:left;
+  margin-left: 45px;
+  margin-bottom: 50px;
+  border: solid 1px;
+  opacity: 0.9;
+  border-radius: 8%;
+}
+#title_block{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+}
+#body_block{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+}
+#additional_block{
+  margin: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+}
+#del_edit_content{
+  margin: 10px;
+}
+#delete_button_custom{
+  width: 150px;
+  padding: 5px;
+  background-color: #FF1D23;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+  transition: 1.5s;
+}
+#delete_button_custom:hover{
+  background-color: #D40D12;
+}
+#edit_button_custom{
+  background-color: #139B08;
+  color: #ffffff;
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+  transition: 1.5s;
+}
+#edit_button_custom:hover{
+  background-color: #135708;
 }
 /* EDIT DASHBOARD*/
 input[type="text"]:focus{

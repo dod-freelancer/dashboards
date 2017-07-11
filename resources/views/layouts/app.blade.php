@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </head>
 <body>
-    <div id="app" class="secondary_page_layout">
+    <div id="app" class="">
         <nav class="navbar navbar-default navbar-static-top navbar-default navbar_layout">
             <div class="container">
                 <div class="navbar-header">
@@ -29,7 +29,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" id="left_navbar" href="{{ url('/') }}">
                         Dashboards
                     </a>
                 </div>
@@ -48,7 +48,7 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a id="right_nav_drop_logout" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
