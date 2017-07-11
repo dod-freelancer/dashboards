@@ -30,10 +30,11 @@ class Dashboard extends Model
     public static function add(){
         $dash = new Dashboard();
         $dash->user_id = Auth::user()->id;
+        $dash->subject = request('subject');
         $dash->title = request('title');
         $dash->body = request('body');
 
-        if ($dash->body && $dash->title && $dash->user_id){
+        if ($dash->body && $dash->title && $dash->user_id && $dash->subject){
             $dash->save();
             return redirect('/home')->with('success','Great, you added new dashboard to your account');
         }
@@ -56,4 +57,14 @@ class Dashboard extends Model
             'body' => $body,
         ));
 }
+
+// we show 4 random dashboards for unregistered users
+    public static function discover(){
+        $count = Dashboard::get()->count();
+        if($count < 4) {
+          return Dashboard::get()->random($count);
+        } else
+        return Dashboard::get()->random(4);
+    }
+
 }
