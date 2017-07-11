@@ -1,6 +1,7 @@
+
 <div class="row">
     <div class="col-md-12">
-        <h2>Yours dashboards: <span class="badge">{{count($dashboards)}}</span></h2>
+        <h2 id="dashboard_text">Yours dashboards: <span class="badge">{{count($dashboards)}}</span></h2>
 
         {{--content of each dashboard from db--}}
         @foreach($dashboards as $dashboard)
@@ -9,7 +10,7 @@
                 <div class="panel-heading">{{$dashboard->title}}
                     <span class="serial-number">{{$dashboard->id}}</span>
                 </div>
-                <div class="panel-body">{{$dashboard->body}}</div>
+                <div class="panel-body panel_custom">{{$dashboard->body}}</div>
                 <div class="panel-footer">
                     <b>Dashboard created at:</b> {{$dashboard->created_at}},
                     <b>Dashboard updated at:</b> {{$dashboard->updated_at}}
@@ -27,7 +28,7 @@
                     <div class="form-group">
                         <form class="form" method="post" action="/home/edit/{{$dashboard->id}}">
                             {{csrf_field()}}
-                            <input type="submit" value="edit" class="btn btn-sm btn-primary">
+                            <input type="submit" value="edit" class="btn btn-sm" id="edit_button">
                         </form>
                     </div>
                 </div>
@@ -88,4 +89,3 @@
 //});
 
 </script>
-
