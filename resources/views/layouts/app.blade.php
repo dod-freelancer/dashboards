@@ -8,14 +8,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Dashboards') }}</title>
+    <title>Dashboards</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div id="app" class="secondary_page_layout">
+        <nav class="navbar navbar-default navbar-static-top navbar-default navbar_layout">
             <div class="container">
                 <div class="navbar-header">
 
@@ -29,7 +30,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Dashboards') }}
+                        Dashboards
                     </a>
                 </div>
 
