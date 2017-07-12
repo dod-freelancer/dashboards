@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
         <title>Dashboards</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"
 
         <!-- Styles -->
         <style>
@@ -66,7 +66,7 @@
 
             .m-b-md {
               margin-top: 150px;
-              margin-bottom: 150px;
+              margin-bottom: 80px;
             }
 
             .cleardiv{
@@ -80,6 +80,7 @@
               font-weight: 400;
               line-height: 1.0;
               color: rgba(0,0,0,0.9);
+              margin-bottom: 80px;
             }
 
             .main_cont_header h1{
@@ -92,6 +93,31 @@
               color: rgba(33,33,33,0.7);
               font-family: sans-serif;
               margin-top: 25px;
+            }
+            /*icons weclcome page*/
+            .icon1::before {
+              color: #3f51b5;
+              content: "\f045";
+              font-family: FontAwesome;
+              padding-right: 20px;
+            }
+            .icon2::before {
+              color: #4caf50;
+              content: "\f055";
+              font-family: FontAwesome;
+              padding-right: 20px;
+            }
+            .icon3::before {
+              color: #00bcd4;
+              content: "\f06e";
+              font-family: FontAwesome;
+              padding-right: 20px;
+            }
+            .icon4::before {
+              color: #9c27b0;
+              content: "\f040";
+              font-family: FontAwesome;
+              padding-right: 20px;
             }
         </style>
     </head>
@@ -119,10 +145,10 @@
                   filled with information
                 </h1>
                 <ul>
-                  <li>Share your own ideas with the whole world</li>
-                  <li>Add links and your notes</li>
-                  <li>Follow the boards of other people</li>
-                  <li>Create boards with different themes</li>
+                  <li class="icon1">Share your own ideas with the whole world</li>
+                  <li class="icon2">Add links and your notes</li>
+                  <li class="icon3">Follow the boards of other people</li>
+                  <li class="icon4">Create boards with different themes</li>
                 </ul>
                 </div>
             </div>

@@ -48,6 +48,7 @@ html, body{
   border: solid 1px;
   opacity: 0.9;
   border-radius: 2%;
+  word-wrap: break-word;
 }
 #title_block{
   padding-top: 10px;
@@ -72,10 +73,13 @@ html, body{
   padding: 5px;
   background-color: #FF1D23;
   box-shadow: 0 1px 15px rgba(0,0,0,0.2);
-  transition: 1.5s;
+  transition: 2s;
+  opacity: 0.8;
+
 }
 #delete_button_custom:hover{
   background-color: #D40D12;
+  opacity: 1;
 }
 #edit_button_custom{
   background-color: #139B08;
@@ -84,10 +88,12 @@ html, body{
   margin: 5px;
   padding: 5px;
   box-shadow: 0 1px 15px rgba(0,0,0,0.2);
-  transition: 1.5s;
+  transition: 2s;
+  opacity: 0.8;
 }
 #edit_button_custom:hover{
   background-color: #135708;
+  opacity: 1;
 }
 /* EDIT DASHBOARD*/
 input[type="text"]:focus{
@@ -116,8 +122,14 @@ input[type="text"].edit_input {
  border: solid 1px #ddd;
 
 }
-.edit_text:focus{
-  background-color: rgba(0, 0, 0, 0.1);
+/*.edit_text:focus{
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}*/
+#edit_info{
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
 /*Register*/
 #register_form_layout{
