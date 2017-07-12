@@ -2,14 +2,15 @@
 @extends('layouts.app')
 @section('content')
 <div class="row">
+
     <div class="col-md-10 col-lg-offset-1">
         <form class="form-horizontal" method="post" action="/home/change/{{$dash->id}}">
-            <legend>You're editing dash nr {{$dash->id}}</legend>
+            <legend id="edit_info">You're editing dash nr  {{$dash->id}}</legend>
                 {{csrf_field()}}
                 <div class="form-group title_layout">
                     <label for="title_edit" class="label_content">Title: </label>
                     <input class="form-control edit_input" type="text" value="{{$dash->title}}"
-                           name="title" id="title_edit">
+                           name="title">
                 </div>
                 <div class="form-group">
                     <label for="body_edit" class="label_content">Body Panel:</label>

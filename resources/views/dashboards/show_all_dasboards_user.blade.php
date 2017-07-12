@@ -36,13 +36,13 @@
                 </div>
             </div>
 
-            {{--MODAL --}}
-            <div class="modal fade" id="editModal" role="dialog">
+            <!-- {{--MODAL --}}
+            <div class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
-                    <!-- Add new dashboard-->
+                    <!-- Edit dashboard--
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h3 class="modal-title">You're editing dashboard {{$dashboard->id}}</h3>
                         </div>
@@ -69,7 +69,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         @endforeach
 
