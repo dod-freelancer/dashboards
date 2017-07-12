@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Dashboard;
+use App\Observer;
 use App\Status;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -30,7 +32,9 @@ class HomeController extends Controller
     public function index()
     {
         $dashboards = Dashboard::getAll();
-        return view('home',compact('dashboards'));
+        $observed = Observer::where('user_id',Auth::user()->id)->get()->count();
+
+        return view('home',compact(['dashboards','observed']));
     }
 
     /**
@@ -83,5 +87,24 @@ class HomeController extends Controller
         return view('dashboards.all_dashboards_subject',compact('dashboards'));
     }
 
+    public function show_each_group($id){
+        $group = Dashboard::get_each_subject($id);
+        return view('dashboards.dashboards_each_category_show',compact('group'));
+    }
+
+    public function fallow($id){
+
+        $user = Observer::where('user_id',Auth::user()->id)->where('dashboard_id',$id)->get();
+//        dd($user);exit();
+        if (isset($user[0])){
+            return "<p>You've observed this dashboard</p>" . "<a href=\"../../dashboards\">Back</a>";
+        } else {
+            $observe = new Observer();
+            $observe->user_id = Auth::user()->id;
+            $observe->dashboard_id = $id;
+            $observe->save();
+            return back();
+        }
+    }
 
 }
