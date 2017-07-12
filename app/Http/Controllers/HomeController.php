@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Dashboard;
+use App\Status;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
@@ -62,5 +63,25 @@ class HomeController extends Controller
         Dashboard::edit($id,request('title'),request('body'));
         return redirect('home');
     }
+
+    // show all topics with count
+    public function show_subject_group(){
+
+        $subjects = [];
+        $statuses = Status::get();
+
+        foreach ($statuses as $l => $status){
+            $subjects[$l][$status->status_dash] = Dashboard::getSubject($status->status_dash);
+        }
+        return view('dashboards.all_dashboards_subject')->with('subjects',$subjects);
+    }
+
+
+    public function show_all_each_subject(){
+        return dd(Dashboard::getSubject('programming'));exit();
+        $dashboards = Dashboard::get();
+        return view('dashboards.all_dashboards_subject',compact('dashboards'));
+    }
+
 
 }

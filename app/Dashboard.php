@@ -67,4 +67,8 @@ class Dashboard extends Model
         return Dashboard::get()->random(4);
     }
 
+    public static function getSubject($subject){
+            return Dashboard::where('subject',$subject)->get()->count();
+    }
+
 }
