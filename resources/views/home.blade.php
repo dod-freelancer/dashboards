@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container secondary_page_layout">
 
     {{--Status before clicked add dashboard--}}
     @include('dashboards.show_modal_status')
@@ -11,4 +11,3 @@
     @include('dashboards.show_all_dasboards_user')
 </div>
 @endsection
-
