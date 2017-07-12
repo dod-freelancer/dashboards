@@ -30,7 +30,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" id="left_navbar" href="{{ url('/') }}">
+                    <a class="navbar-brand" id="left_navbar" href="{{ url('/home') }}">
                         Dashboards
                     </a>
                 </div>
