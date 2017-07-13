@@ -9,19 +9,19 @@
             !!!!!!!!!!!!
 
         --}}
-        <h4>Yours observed <b>{{$observed}} </b><a href="/observed">show</a> </h4>
+        <h4>Yours observed <b>{{$observed}} </b><a href="/observed" id="show-observed">show</a> </h4>
 
         {{--content of each dashboard from db--}}
         @foreach($dashboards as $dashboard)
             <div id="dashboard_block">
-                <div id="title_block">{{$dashboard->title}}
-                    <span>{{$dashboard->id}}</span>
+                <div id="title_block">
+                    <span class="title-dash">{{$dashboard->title}}</span>
                 </div>
               </hr>
                 <div id="body_block">{{$dashboard->body}}</div>
               </hr>
                 <div id="additional_block">
-                    <b>Dashboard created at:</b> {{$dashboard->created_at}},
+                    <b>Dashboard created at:</b> {{$dashboard->created_at}}
                     <b>Dashboard updated at:</b> {{$dashboard->updated_at}}
                 </div>
               </hr>
