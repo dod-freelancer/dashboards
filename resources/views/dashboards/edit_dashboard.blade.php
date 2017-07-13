@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
 
-    <div class="col-md-10 col-lg-offset-1">
+    <div class="col-xs-10 col-sm-10  col-xs-offset-1">
         <form class="form-horizontal" method="post" action="/home/change/{{$dash->id}}">
             <legend id="edit_info">You're editing dash nr  {{$dash->id}}</legend>
                 {{csrf_field()}}

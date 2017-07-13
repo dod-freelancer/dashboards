@@ -135,8 +135,8 @@ a:visited{
 .dashboard_subject_section{
   text-align: center;
   background-color: white;
-  width: 20%;
-  margin-left: 20px;
+  width: 30%;
+  margin-left: 2.5%;
   float:left;
   margin-bottom: 50px;
   border: solid 1px;
@@ -144,6 +144,26 @@ a:visited{
   border-radius: 2%;
   word-wrap: break-word;
 }
+.dashboard_subject_section a{
+  color: black;
+}
+
+@media screen and (max-width: 640px) {
+  .dashboard_subject_section{
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .dashboard_subject_section:first-of-type{
+    margin-top: 10px;
+  }
+  .dashboard_subject_section{
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
+}
+
 
 /* EDIT DASHBOARD*/
 input[type="text"]:focus{
