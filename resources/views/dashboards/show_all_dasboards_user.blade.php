@@ -9,7 +9,7 @@
             !!!!!!!!!!!!
 
         --}}
-        <h4>Yours observed <b>{{$observed}} </b><a href="/dashboards/observed">show</a> </h4>
+        <h4>Yours observed <b>{{$observed}} </b><a href="/observed">show</a> </h4>
 
         {{--content of each dashboard from db--}}
         @foreach($dashboards as $dashboard)

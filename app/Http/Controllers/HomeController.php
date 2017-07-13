@@ -44,6 +44,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function delete($id){
+        Observer::where('dashboard_id',$id)->delete();
         Dashboard::deleteDashboard($id);
         return  redirect('/home');
     }
@@ -91,13 +92,13 @@ class HomeController extends Controller
         $group = Dashboard::get_each_subject($id);
         return view('dashboards.dashboards_each_category_show',compact('group'));
     }
-
-    public function fallow($id){
+// follow button
+    public function follow($id){
 
         $user = Observer::where('user_id',Auth::user()->id)->where('dashboard_id',$id)->get();
 //        dd($user);exit();
         if (isset($user[0])){
-            return "<p>You've observed this dashboard</p>" . "<a href=\"../../dashboards\">Back</a>";
+            return "<p>You're observed this dashboard</p>" . "<a href=\"../../dashboards\">Back</a>";
         } else {
             $observe = new Observer();
             $observe->user_id = Auth::user()->id;
@@ -106,5 +107,9 @@ class HomeController extends Controller
             return back();
         }
     }
-
+    // Yours observed
+    public function user_observed(){
+        $arr = Observer::show(Auth::user()->id);
+        return view('dashboards.observed_user')->with('dashboards',$arr);
+        }
 }
