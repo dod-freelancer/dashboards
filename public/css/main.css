@@ -29,7 +29,42 @@ html, body{
   color:white;
 }
 /*ALL DASHBOARD*/
+#add_new_dash{
+  background-color: inherit;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+  border: 1px white;
+  margin-top: 20px;
+}
+#add_new_dash:hover{
+ opacity: 0.7;
+}
+#add_new_after {
+  background-color: inherit;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+  border: 1px white;
+  margin-top: 20px;
+}
+#add_new_after:hover {
+ opacity: 0.7;
+}
 
+.show_all_dash{
+  background-color: inherit;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+  border: 1px white;
+  margin-top: 20px;
+  width: 200px;
+  padding: 10px;
+  color: white;
+}
+a:link{
+  color: white;
+  text-decoration: none;
+}
+a:visited{
+  color: white;
+  text-decoration: none;
+}
 #left_navbar{
   z-index: 5;
   color: white;
@@ -103,7 +138,6 @@ input[type="text"].edit_input {
   border: solid 1px #707070;
   display: block;
   margin: 0;
-  width: 600px;
   font-family: sans-serif;
   font-size: 18px;
   appearance: none;
@@ -114,13 +148,18 @@ input[type="text"].edit_input {
   font-size: 25px;
 }
 .edit_text {
- width: 600px;
- height: 300px;
+
  font: normal 14px verdana;
  line-height: 25px;
  padding: 2px 10px;
  border: solid 1px #ddd;
 
+}
+.back_button{
+  background-color: #FF1D23;
+  width: 74.52px;
+  height: 36px;
+  color: white;
 }
 /*.edit_text:focus{
   background-color: rgba(0, 0, 0, 0.2);
@@ -167,7 +206,6 @@ input[type="text"].edit_input {
 .discover_random_dash{
   text-align: center;
   background-color: white;
-  width: 43%;
   float:left;
   margin-left: 45px;
   margin-bottom: 50px;
@@ -179,9 +217,11 @@ input[type="text"].edit_input {
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+  word-wrap: break-word;
 }
 .discover_random_body{
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+  word-wrap: break-word;
 }
