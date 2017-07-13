@@ -6,7 +6,7 @@
     <p>body: {{$g->body}}</p>
     <p>owner: {{$arr['user'][0]}}</p>
 
-    <a href="/dashboards/follow/{{$g->id}}">follow</a>
+    <a style="color:black;" href="/dashboards/follow/{{$g->id}}">follow</a>
     <p>followers: {{$arr[0]}}</p>
     <hr>
   </div>

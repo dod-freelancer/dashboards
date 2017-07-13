@@ -4,8 +4,8 @@
         <!-- Add new dashboard-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Add new dashboard</h3>
+                <button type="button"  class="close" data-dismiss="modal">&times;</button>
+                <h3  class="modal-title">Add new dashboard</h3>
             </div>
             <form class="form" method="post" action="/home/add">
                 {{csrf_field()}}
