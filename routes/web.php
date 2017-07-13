@@ -26,6 +26,9 @@ Route::get('/dashboards','HomeController@show_subject_group');
 
 Route::get('/dashboards/{id}','HomeController@show_each_group');
 
-Route::get('dashboards/fallow/{id}','HomeController@fallow');
+Route::get('dashboards/follow/{id}','HomeController@follow');
+
+Route::get('/observed','HomeController@user_observed');
+
 
 Route::get('/discover','DiscoverController@index');
