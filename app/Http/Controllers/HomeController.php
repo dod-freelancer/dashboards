@@ -90,13 +90,21 @@ class HomeController extends Controller
 
     public function show_each_group($id){
         $group = Dashboard::get_each_subject($id);
-        return view('dashboards.dashboards_each_category_show',compact('group'));
+
+//          dd($group);exit();
+        $arr =  [];
+        foreach($group as $g){
+           $arr[] = Observer::where('dashboard_id',$g['id'])->get()->count();
+        }
+//        return $arr;
+        return view('dashboards.dashboards_each_category_show',compact(['group','arr']));
     }
+
 // follow button
+//show and count followers of single dashboards
     public function follow($id){
 
         $user = Observer::where('user_id',Auth::user()->id)->where('dashboard_id',$id)->get();
-//        dd($user);exit();
         if (isset($user[0])){
             return "<p>You're observed this dashboard</p>" . "<a href=\"../../dashboards\">Back</a>";
         } else {
