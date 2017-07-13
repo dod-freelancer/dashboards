@@ -95,8 +95,9 @@ class HomeController extends Controller
         $arr =  [];
         foreach($group as $g){
            $arr[] = Observer::where('dashboard_id',$g['id'])->get()->count();
+           $arr['user'] = User::where('id',$g->user_id)->pluck('email')->toArray();
         }
-//        return $arr;
+
         return view('dashboards.dashboards_each_category_show',compact(['group','arr']));
     }
 
