@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-12" >
         <h2 id="dashboard_text">Yours dashboards: <span class="badge">{{count($dashboards)}}</span></h2>
-        <h4><a href="/dashboards">Show all dashboards</a></h4>
+        <h4 class="show_all_dash"><a href="/dashboards">Show all dashboards</a></h4>
         {{--add here
             service of observed !!!!!!!!!
             !!!!!!!!!!

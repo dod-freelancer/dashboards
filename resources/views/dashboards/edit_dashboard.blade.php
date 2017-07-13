@@ -18,10 +18,10 @@
                         {{$dash->body}}
                     </textarea>
                 </div>
-                <input type="submit" value="change" class="btn">
+                <input type="submit" value="change" class="btn btn-success btn-md">
         </form>
 
-        <a href="{{url('home')}}"><button class="btn btn-danger">Back</button></a>
+        <a href="{{url('home')}}"><button class="btn back_button">Back</button></a>
     </div>
 </div>
 @endsection
