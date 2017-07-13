@@ -262,11 +262,20 @@ input[type="text"].edit_input {
 .discover_random_dash{
   text-align: center;
   background-color: white;
-  margin-bottom: 50px;
+  margin: 2% 5% 2% 5%;
   border: solid 1px;
   opacity: 0.9;
   border-radius: 2%;
 }
+
+@media screen and (max-width: 790px) {
+  .discover_random_dash{
+    margin: 4% 0%;
+    padding: 0;
+    border: 2px solid;
+  }
+}
+
 .discover_random_title{
   padding-top: 10px;
   padding-bottom: 10px;
