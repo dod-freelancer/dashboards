@@ -76,9 +76,8 @@ a:visited{
 #dashboard_block{
   text-align: center;
   background-color: white;
-  width: 43%;
+  width: 100%;
   float:left;
-  margin-left: 45px;
   margin-bottom: 50px;
   border: solid 1px;
   opacity: 0.9;
@@ -130,6 +129,22 @@ a:visited{
   background-color: #135708;
   opacity: 1;
 }
+
+/* Dashboards Subject*/
+
+.dashboard_subject_section{
+  text-align: center;
+  background-color: white;
+  width: 20%;
+  margin-left: 20px;
+  float:left;
+  margin-bottom: 50px;
+  border: solid 1px;
+  opacity: 0.9;
+  border-radius: 2%;
+  word-wrap: break-word;
+}
+
 /* EDIT DASHBOARD*/
 input[type="text"]:focus{
   box-shadow: 0 0 5px 1px #969696;
