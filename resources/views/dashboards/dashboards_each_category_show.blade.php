@@ -3,7 +3,7 @@
 @foreach($group as $g)
     <p>title {{$g->title}}</p>
     <p>body {{$g->body}}</p>
-    <a href="/dashboards/fallow/{{$g->id}}">fallow</a>
+    <a href="/dashboards/follow/{{$g->id}}">follow</a>
     <hr>
     @endforeach
     @endsection
