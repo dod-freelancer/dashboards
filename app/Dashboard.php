@@ -18,7 +18,7 @@ class Dashboard extends Model
     }
 
     public static function deleteDashboard($id){
-          return Dashboard::find($id)->delete();
+          return self::find($id)->delete();
     }
 
     /**
@@ -60,15 +60,21 @@ class Dashboard extends Model
 
 // we show 4 random dashboards for unregistered users
     public static function discover(){
-        $count = Dashboard::get()->count();
+        $count = self::get()->count();
         if($count < 4) {
-          return Dashboard::get()->random($count);
+          return self::get()->random($count);
         } else
-        return Dashboard::get()->random(4);
+        return self::get()->random(4);
     }
 
+    // downloaded dashboards category - count
     public static function getSubject($subject){
-            return Dashboard::where('subject',$subject)->get()->count();
+            return self::where('subject',$subject)->get()->count();
+    }
+
+    // downloaded all dashboards - each category
+    public static function get_each_subject($category_name){
+       return self::where('subject',$category_name)->get();
     }
 
 }

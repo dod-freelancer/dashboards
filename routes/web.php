@@ -24,4 +24,8 @@ Route::post('/home/edit/{id}','HomeController@edit');
 Route::post('/home/change/{id}','HomeController@change');
 Route::get('/dashboards','HomeController@show_subject_group');
 
+Route::get('/dashboards/{id}','HomeController@show_each_group');
+
+Route::get('dashboards/fallow/{id}','HomeController@fallow');
+
 Route::get('/discover','DiscoverController@index');
