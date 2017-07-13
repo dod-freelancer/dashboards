@@ -313,3 +313,21 @@ input[type="text"].edit_input {
     margin: 0 0 5% 0;
   }
 }
+/*Followed user*/
+.observe_user_layout{
+text-align: center;
+background-color: white;
+width: 30%;
+margin-left: 2.5%;
+float:left;
+margin-bottom: 50px;
+border: solid 1px;
+opacity: 0.9;
+border-radius: 2%;
+word-wrap: break-word;
+}
+#icon_add_buton::before{
+  content: "\f067";
+  font-family: FontAwesome;
+  color: white;
+}
