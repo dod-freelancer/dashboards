@@ -92,13 +92,22 @@ class HomeController extends Controller
         $group = Dashboard::get_each_subject($id);
         return view('dashboards.dashboards_each_category_show',compact('group'));
     }
+<<<<<<< HEAD
 // follow button
     public function follow($id){
+=======
+
+    public function fallow($id){
+>>>>>>> 66aa46348018952cea5c9b96faebff55806b29d5
 
         $user = Observer::where('user_id',Auth::user()->id)->where('dashboard_id',$id)->get();
 //        dd($user);exit();
         if (isset($user[0])){
+<<<<<<< HEAD
             return "<p>You're observed this dashboard</p>" . "<a href=\"../../dashboards\">Back</a>";
+=======
+            return "<p>You've observed this dashboard</p>" . "<a href=\"../../dashboards\">Back</a>";
+>>>>>>> 66aa46348018952cea5c9b96faebff55806b29d5
         } else {
             $observe = new Observer();
             $observe->user_id = Auth::user()->id;
@@ -107,9 +116,13 @@ class HomeController extends Controller
             return back();
         }
     }
+<<<<<<< HEAD
     // Yours observed
     public function user_observed(){
         $arr = Observer::show(Auth::user()->id);
         return view('dashboards.observed_user')->with('dashboards',$arr);
         }
+=======
+
+>>>>>>> 66aa46348018952cea5c9b96faebff55806b29d5
 }

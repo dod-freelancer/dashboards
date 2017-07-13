@@ -75,6 +75,7 @@ class Dashboard extends Model
     // downloaded all dashboards - each category
     public static function get_each_subject($category_name){
        return self::where('subject',$category_name)->get();
+<<<<<<< HEAD
     }
 
     public static function get_observed_user($id_user){
@@ -84,6 +85,8 @@ class Dashboard extends Model
            $arr[] = Dashboard::where('id',$ob)->get();
         }
         return view('dashboards.observed_user_blade',compact('arr'));
+=======
+>>>>>>> 66aa46348018952cea5c9b96faebff55806b29d5
     }
 
 }
